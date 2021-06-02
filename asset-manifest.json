@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/TakeIt/static/css/main.5f361e03.chunk.css",
+    "main.js": "/TakeIt/static/js/main.f67372df.chunk.js",
+    "main.js.map": "/TakeIt/static/js/main.f67372df.chunk.js.map",
+    "runtime-main.js": "/TakeIt/static/js/runtime-main.332718bc.js",
+    "runtime-main.js.map": "/TakeIt/static/js/runtime-main.332718bc.js.map",
+    "static/js/2.ca4073d5.chunk.js": "/TakeIt/static/js/2.ca4073d5.chunk.js",
+    "static/js/2.ca4073d5.chunk.js.map": "/TakeIt/static/js/2.ca4073d5.chunk.js.map",
+    "index.html": "/TakeIt/index.html",
+    "precache-manifest.784c8b5fda30a01835b0bfe2e8edccf1.js": "/TakeIt/precache-manifest.784c8b5fda30a01835b0bfe2e8edccf1.js",
+    "service-worker.js": "/TakeIt/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/TakeIt/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.ca4073d5.chunk.js.LICENSE.txt": "/TakeIt/static/js/2.ca4073d5.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/TakeIt/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.332718bc.js",
+    "static/js/2.ca4073d5.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.f67372df.chunk.js"
+  ]
+}
