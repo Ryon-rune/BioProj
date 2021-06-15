@@ -10991,11 +10991,6 @@ open@^7.0.2:
     is-docker "^2.0.0"
     is-wsl "^2.1.1"
 
-openchemlib@^7.4.0:
-  version "7.4.0"
-  resolved "https://registry.yarnpkg.com/openchemlib/-/openchemlib-7.4.0.tgz#a096b255f10915eafa0c43e0ae0f0ef909d3f523"
-  integrity sha512-vQEjGOsFHy2685gdKohCkPs1W8eOG1vgwIvohzZp2saVpmFac8k0rD9NMhWZLByptck4jH4JgM2HS3vWM0gF6g==
-
 opn@^5.2.0, opn@^5.5.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/opn/-/opn-5.5.0.tgz#fc7164fab56d235904c51c3b27da6758ca3b9bfc"
@@ -12732,6 +12727,11 @@ react-fast-compare@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
   integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
+
+react-game-engine@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-game-engine/-/react-game-engine-1.0.0.tgz#944cdbe860502ffff4958c7ec8b81986565791cd"
+  integrity sha512-we1V6z3lsvcTD9n/4/livF+3r4fDAWvi0uiRCboA74welANxzhD6J/F1V2wGAqf/mCQTBgJR2c/clMBKVS4SVg==
 
 react-helmet-async@^1.0.7:
   version "1.0.7"
