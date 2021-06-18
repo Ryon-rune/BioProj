@@ -19,8 +19,8 @@ import mushroomPic from "../res/landing-page/Mushroom.jpg";
 import logYSprouts from "../res/landing-page/banner-imagethrd.jpg";
 import bgSilhouette from "../res/landing-page/bg.png";
 import { GameEngine } from "react-game-engine";
-import { Box, Macrophage } from "../components/renderers";
-import { MoveBox, MoveMacro } from "../components/systems";
+import { Box, Macrophage, Site, Menu, Prog } from "../components/renderers";
+import { addEnbrel, UpdateEntities, menuCheck } from "../components/systems";
 
 const window = {
   width: 800,
@@ -42,23 +42,77 @@ export default class Game extends PureComponent {
       >
         {/* *****************************************ENGINE **************************************** */}
         <GameEngine
-          style={{ ...window, backgroundColor: "blue" }}
-          systems={[MoveBox, MoveMacro]}
+          style={{ ...window, backgroundColor: "#710C04" }}
+          systems={[addEnbrel, UpdateEntities, menuCheck]}
           entities={{
-            //-- Notice that each entity has a unique id (required)
-            //-- and a renderer property (optional). If no renderer
-            //-- is supplied with the entity - it won't get displayed.
-            m1: {
-              x: 150,
-              y: 200,
-              window: window,
-              spd: 0.1,
-              size: 75,
-              cdTimer: 300,
-              goal: { targetLocked: false, currentTarget: { x: 200, y: 400 } },
-              type: "M",
-              renderer: <Macrophage />,
+            gameTable: { m: 1, t: 0, e: 0, window: window },
+            menu: {
+              stage: 0,
+              title: [
+                "Enbrel Simulation",
+                "R.I.P your anyeurism ruptured",
+                "Congrats! You lived a minute!",
+              ],
+              subtitle: ["Start Game", "Another Go?", "Another Go?"],
+              renderer: <Menu />,
             },
+            prog: {
+              stage: 0,
+              count: 0,
+              maxCount: 3500,
+              renderer: <Prog />,
+            },
+            // m1: {
+            //   x: 150,
+            //   y: 500,
+            //   spd: 0.15,
+            //   maxSpd: 2,
+            //   inflameIncrease: 0.02,
+            //   size: 75,
+            //   cdTimer: 300,
+            //   defaultTimer: 500,
+            //   goal: {
+            //     targetLocked: false,
+            //     currentTarget: { x: 150, y: 700 },
+            //     reached: false,
+            //   },
+            //   type: "M",
+            //   id: "m1",
+            //   renderer: <Macrophage />,
+            // },
+            // m2: {
+            //   x: 250,
+            //   y: 200,
+            //   spd: 0.15,
+            //   maxSpd: 2,
+            //   inflameIncrease: 0.02,
+            //   size: 75,
+            //   cdTimer: 300,
+            //   defaultTimer: 500,
+            //   goal: {
+            //     targetLocked: false,
+            //     currentTarget: { x: 300, y: 600 },
+            //     reached: false,
+            //   },
+            //   type: "M",
+            //   id: "m2",
+            //   renderer: <Macrophage />,
+            // },
+            // i1: {
+            //   x: 500,
+            //   y: 300,
+            //   spd: 0.001,
+            //   tnf: 0,
+            //   fireTimer: 800,
+            //   sizeBound: [80, 100],
+            //   hasPopped: false,
+            //   colour: "pink",
+            //   size: 75,
+            //   type: "I",
+            //   id: "i1",
+            //   popped: false,
+            //   renderer: <Site />,
+            // },
           }}
         ></GameEngine>
         {/* *****************************************ENGINE **************************************** */}
