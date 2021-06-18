@@ -14,6 +14,7 @@ import {
   CardTitle,
   CardSubtitle,
 } from "shards-react";
+import YouTube from "react-youtube";
 import { Image } from "react-bootstrap";
 
 function ImageText(props) {
@@ -29,19 +30,16 @@ function ImageText(props) {
         }}
       >
         {props.flip && props.isMobile && (
-          <Image
-            style={{
-              // position: "absolute",
-              // top: "55px",
-              // left: "200px",
-              // width: "800px",
-              // height: "2px",
-              // background: "#2c3f58",
-              marginBottom: "20px",
-              width: props.isMobile ? "90%" : "100%",
+          <YouTube
+            videoId={props.embedId}
+            opts={{
+              height: "390",
+              width: "640",
+              playerVars: {
+                // https://developers.google.com/youtube/player_parameters
+                autoplay: 1,
+              },
             }}
-            fluid
-            src={props.imageSrc}
           />
         )}
         {props.flip && (
@@ -60,9 +58,11 @@ function ImageText(props) {
             <div
               style={{
                 background: "rgb(216,232,230)",
-                paddingLeft: "2em",
+                paddingLeft: "5em",
+                paddingRight: "10em",
                 paddingBottom: "2em",
                 paddingTop: "1em",
+                width: "800px",
               }}
             >
               <h3
@@ -103,19 +103,15 @@ function ImageText(props) {
           </div>
         )}
         {(!props.flip || !props.isMobile) && (
-          <Image
-            style={{
-              // position: "absolute",
-              // top: "55px",
-              // left: "200px",
-              // width: "800px",
-              // height: "2px",
-              // background: "#2c3f58",
-              marginBottom: "20px",
-              width: props.isMobile ? (props.text2 ? "150%" : "100%") : "100%",
+          <YouTube
+            videoId={props.embedId}
+            opts={{
+              height: "390",
+              width: "640",
+              playerVars: {
+                autoplay: 0,
+              },
             }}
-            fluid
-            src={props.imageSrc}
           />
         )}
 
@@ -180,67 +176,3 @@ function ImageText(props) {
 }
 
 export default ImageText;
-
-/*
-
-function ImageText(props) {
-  return (
-    <Container className="dr-example-container">
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-        }}
-      >
-        <Image
-          style={{
-            // position: "absolute",
-            // top: "55px",
-            // left: "200px",
-            // width: "800px",
-            // height: "2px",
-            // background: "#2c3f58",
-            marginBottom: "60px",
-            width: "100%",
-          }}
-          fluid
-          src={props.imageSrc}
-        />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            marginLeft: "50px",
-          }}
-        >
-          <h3
-            style={{
-              display: "block",
-              flexDirection: "row",
-              //   justifyContent: "flex-start",
-              color: "#2c4058",
-              fontWeight: "600",
-              fontSize: "30px",
-            }}
-          >
-            {props.title}
-          </h3>
-
-          <div
-            style={{
-              display: "block",
-              justifyContent: "flex-start",
-            }}
-          >
-            {props.text}
-          </div>
-
-          <Button outline theme="secondary">
-            {props.btnText}
-          </Button>
-        </div>
-      </div>
-    </Container>
-  );
-}
-*/

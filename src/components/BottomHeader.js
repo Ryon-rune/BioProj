@@ -87,7 +87,7 @@ function BottomHeader(props) {
                 color: "#ffffff",
               }}
             >
-              Some Other Tagline here
+              Protein Engineering Quiz
             </h5>
 
             <Button
@@ -99,8 +99,12 @@ function BottomHeader(props) {
               }}
               squared
               theme="success"
+              onClick={() => {
+                window.location =
+                  "https://sites.google.com/view/biol-111-protein-quiz/home?authuser=0";
+              }}
             >
-              what should go here?
+              Check it out
             </Button>
 
             <div

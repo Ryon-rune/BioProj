@@ -50,7 +50,7 @@ export default class Game extends PureComponent {
               stage: 0,
               title: [
                 "Enbrel Simulation",
-                "R.I.P your anyeurism ruptured",
+                "R.I.P your aneurysm ruptured",
                 "Congrats! You lived a minute!",
               ],
               subtitle: ["Start Game", "Another Go?", "Another Go?"],
@@ -59,7 +59,7 @@ export default class Game extends PureComponent {
             prog: {
               stage: 0,
               count: 0,
-              maxCount: 3500,
+              maxCount: 6000,
               renderer: <Prog />,
             },
             // m1: {

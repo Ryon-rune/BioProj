@@ -27,6 +27,7 @@
     "react-day-picker": "^7.4.10",
     "react-device-detect": "^1.17.0",
     "react-dom": "^16.13.1",
+    "react-event-timeline": "^1.6.3",
     "react-game-engine": "^1.0.0",
     "react-helmet-async": "^1.0.7",
     "react-navigation-stack": "^2.8.2",
@@ -35,6 +36,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
     "react-social-icons": "^4.1.0",
+    "react-youtube": "^7.13.1",
     "shards-react": "^1.0.3",
     "styled-components": "^5.2.0",
     "yarn": "^1.22.5"

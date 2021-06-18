@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import Home from "../pages/HomePage";
 import GamePage from "../pages/GamePage";
+import Citation from "../pages/CitationPage";
 import { makeStyles } from "@material-ui/core/styles";
 import { Navbar } from "shards-react";
 import { isMobile } from "react-device-detect";
@@ -66,6 +67,11 @@ function Navigator(props) {
         path="/game"
         render={(props) => <GamePage {...props} isMobile={isMobile} />}
       />
+      <Route
+        exact
+        path="/citation"
+        render={(props) => <Citation {...props} />}
+      />
 
       <Navbar
         style={{
@@ -79,7 +85,7 @@ function Navigator(props) {
           // left: "50%",
         }}
         type="dark"
-        theme="rgba(0,0,0,0.0)"
+        theme=""
         expand="md"
       >
         <div>
@@ -89,7 +95,16 @@ function Navigator(props) {
               justifyContent: "flex-start",
             }}
           >
-            Home
+            {" "}
+            <text
+              style={{
+                color: "white",
+                fontSize: 20,
+                fontWeight: "bold",
+              }}
+            >
+              Home
+            </text>
           </Link>
         </div>
         <div>
@@ -99,7 +114,33 @@ function Navigator(props) {
               justifyContent: "flex-start",
             }}
           >
-            GamePage
+            <text
+              style={{
+                color: "white",
+                fontSize: 20,
+                fontWeight: "bold",
+              }}
+            >
+              GamePage
+            </text>
+          </Link>
+        </div>
+        <div>
+          <Link
+            to="/citation"
+            style={{
+              justifyContent: "flex-start",
+            }}
+          >
+            <text
+              style={{
+                color: "white",
+                fontSize: 20,
+                fontWeight: "bold",
+              }}
+            >
+              Citations
+            </text>
           </Link>
         </div>
       </Navbar>
